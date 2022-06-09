@@ -53,11 +53,14 @@
                 </headerToolbar>
 
                 <columns>
-                    <Column id="nameColumn">
-                        <Text text="{i18n>tableNameColumnTitle}" id="nameColumnTitle"/>
+                    <Column id="DescriptionColumn">
+                        <Text text="Description" id="DescriptionColumnTitle"/>
                     </Column>
-                    <Column id="unitNumberColumn" hAlign="End">
-                        <Text text="{i18n>tableUnitNumberColumnTitle}" id="unitNumberColumnTitle"/>
+                    <Column id="OwnerColumn">
+                        <Text text="Owner" id="OwnerColumnTitle"/>
+                    </Column>
+                    <Column id="TimelineColumn">
+                        <Text text="Timeline" id="TimelineColumnTitle"/>
                     </Column>
                 </columns>
 
@@ -67,8 +70,9 @@
                         press=".onPress">
                         <cells>
                             <ObjectIdentifier
-                                title="{ID}"/>
-                            <ObjectNumber />
+                                text="{description}"/>
+                            <Text text="{owner}" />
+                            <Text text="{timeline}" />
                         </cells>
                     </ColumnListItem>
                 </items>

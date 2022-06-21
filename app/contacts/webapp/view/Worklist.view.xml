@@ -53,11 +53,23 @@
                 </headerToolbar>
 
                 <columns>
-                    <Column id="nameColumn">
-                        <Text text="{i18n>tableNameColumnTitle}" id="nameColumnTitle"/>
+                    <Column id="AccountNameColumn">
+                        <Text text="Account Name" id="AccountNameColumnTitle"/>
                     </Column>
-                    <Column id="unitNumberColumn" hAlign="End">
-                        <Text text="{i18n>tableUnitNumberColumnTitle}" id="unitNumberColumnTitle"/>
+                    <Column id="SalutationColumn">
+                        <Text text="Salutation" id="SalutationColumnTitle"/>
+                    </Column>
+                    <Column id="FirstNameColumn">
+                        <Text text="First Name" id="FirstNameColumnTitle"/>
+                    </Column>
+                    <Column id="LastNameColumn">
+                        <Text text="Last Name" id="LastNameColumnTitle"/>
+                    </Column>
+                    <Column id="TitleColumn">
+                        <Text text="Title" id="TitleColumnTitle"/>
+                    </Column>
+                    <Column id="EmailColumn" hAlign="End">
+                        <Text text="Email" id="EmailColumnTitle"/>
                     </Column>
                 </columns>
 
@@ -67,8 +79,12 @@
                         press=".onPress">
                         <cells>
                             <ObjectIdentifier
-                                title="{ID}"/>
-                            <ObjectNumber />
+                                text="{AccountName}"/>
+                            <Text text="{Salutation}" />
+                            <Text text="{FirstName}" />
+                            <Text text="{LastName}" />
+                            <Text text="{Title}" />                            
+                            <Text text="{Email}" />
                         </cells>
                     </ColumnListItem>
                 </items>

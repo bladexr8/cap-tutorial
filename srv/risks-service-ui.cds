@@ -130,7 +130,6 @@ annotate RiskService.Contacts with @(
 			{Value: Salutation},
 			{Value: FirstName},
 			{Value: LastName},
-			{Value: Title},
 			{
 				Value: Email,
 				![@HTML5.CssDefaults] : {width : '100%'}
@@ -143,8 +142,14 @@ annotate RiskService.Contacts with @(
 			$Type : 'UI.FieldGroupType',
 			Data: [
 				{Value: Salutation},
+				{Value: Department},
 				{Value: FirstName},
-				{Value: LastName}
+				{Value: Birthdate},
+				{Value: LastName},
+				{Value: Phone},
+				{Value: Email},
+				{Value: MobilePhone},
+				
 			]
 			
 		},

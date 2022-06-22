@@ -83,6 +83,10 @@ modules:
       - nscontacts.zip
       name: nscontacts
       target-path: resources/
+    - artifacts:
+      - nssfcontacts.zip
+      name: nssfcontacts
+      target-path: resources/
 - name: nsrisks
   type: html5
   path: app/risks
@@ -106,6 +110,16 @@ modules:
 - name: nscontacts
   type: html5
   path: app/contacts
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+- name: nssfcontacts
+  type: html5
+  path: app/sfcontacts
   build-parameters:
     build-result: dist
     builder: custom

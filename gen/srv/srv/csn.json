@@ -358,6 +358,9 @@
         {
           "Value": {
             "=": "miti_ID"
+          },
+          "@HTML5.CssDefaults": {
+            "width": "100%"
           }
         },
         {
@@ -691,6 +694,102 @@
         }
       ],
       "@odata.draft.enabled": true,
+      "@UI.HeaderInfo.$Type": "UI.HeaderInfoType",
+      "@UI.HeaderInfo.TypeName": "Contact",
+      "@UI.HeaderInfo.TypeNamePlural": "Contacts",
+      "@UI.HeaderInfo.Title.$Type": "UI.DataField",
+      "@UI.HeaderInfo.Title.Value": {
+        "=": "AccountName"
+      },
+      "@UI.HeaderInfo.Description.$Type": "UI.DataField",
+      "@UI.HeaderInfo.Description.Value": {
+        "=": "Title"
+      },
+      "@UI.SelectionFields": [
+        {
+          "=": "AccountName"
+        }
+      ],
+      "@UI.LineItem": [
+        {
+          "Value": {
+            "=": "AccountName"
+          }
+        },
+        {
+          "Value": {
+            "=": "Salutation"
+          }
+        },
+        {
+          "Value": {
+            "=": "FirstName"
+          }
+        },
+        {
+          "Value": {
+            "=": "LastName"
+          }
+        },
+        {
+          "Value": {
+            "=": "Email"
+          },
+          "@HTML5.CssDefaults": {
+            "width": "100%"
+          }
+        }
+      ],
+      "@UI.Facets": [
+        {
+          "$Type": "UI.ReferenceFacet",
+          "Label": "Main",
+          "Target": "@UI.FieldGroup#Main"
+        }
+      ],
+      "@UI.FieldGroup#Main.$Type": "UI.FieldGroupType",
+      "@UI.FieldGroup#Main.Data": [
+        {
+          "Value": {
+            "=": "Salutation"
+          }
+        },
+        {
+          "Value": {
+            "=": "Department"
+          }
+        },
+        {
+          "Value": {
+            "=": "FirstName"
+          }
+        },
+        {
+          "Value": {
+            "=": "Birthdate"
+          }
+        },
+        {
+          "Value": {
+            "=": "LastName"
+          }
+        },
+        {
+          "Value": {
+            "=": "Phone"
+          }
+        },
+        {
+          "Value": {
+            "=": "Email"
+          }
+        },
+        {
+          "Value": {
+            "=": "MobilePhone"
+          }
+        }
+      ],
       "projection": {
         "from": {
           "ref": [
@@ -765,33 +864,43 @@
           "type": "cds.UUID"
         },
         "AccountName": {
+          "@title": "Account Name",
           "type": "cds.String"
         },
         "Salutation": {
+          "@title": "Salutation",
           "type": "cds.String"
         },
         "FirstName": {
+          "@title": "First Name",
           "type": "cds.String"
         },
         "LastName": {
+          "@title": "Last Name",
           "type": "cds.String"
         },
         "Title": {
+          "@title": "Title",
           "type": "cds.String"
         },
         "Department": {
+          "@title": "Department",
           "type": "cds.String"
         },
         "Birthdate": {
+          "@title": "Birthdate",
           "type": "cds.String"
         },
         "Phone": {
+          "@title": "Phone",
           "type": "cds.String"
         },
         "MobilePhone": {
+          "@title": "Mobile Phone",
           "type": "cds.String"
         },
         "Email": {
+          "@title": "Email",
           "type": "cds.String"
         }
       }

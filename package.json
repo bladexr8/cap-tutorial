@@ -23,7 +23,8 @@
         "start": "cds run",
         "watch-risks": "cds watch --open risks/webapp/index.html?sap-ui-xx-viewCache=false#fe-lrop-v4",
         "watch-mitigations": "cds watch --open mitigations/webapp/index.html?sap-ui-xx-viewCache=false#fe-lrop-v4",
-        "undeploy": "cf undeploy cpapp --delete-services --delete-service-keys"
+        "undeploy": "cf undeploy cpapp --delete-services --delete-service-keys",
+        "watch-contacts": "cds watch --open contacts/webapp/index.html?sap-ui-xx-viewCache=false"
     },
     "eslintConfig": {
         "extends": "eslint:recommended",
@@ -52,7 +53,8 @@
     },
     "sapux": [
         "app/risks",
-        "app/mitigations"
+        "app/mitigations",
+        "app/contacts"
     ],
     "cds": {
         "requires": {

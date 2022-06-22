@@ -1,0 +1,45 @@
+<mvc:View
+    controllerName="ns.contacts.controller.Object"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:semantic="sap.f.semantic">
+
+    <semantic:SemanticPage
+        id="page"
+        headerPinnable="false"
+        toggleHeaderOnTitleClick="false"
+        busy="{objectView>/busy}"
+        busyIndicatorDelay="{objectView>/delay}">
+
+        <semantic:titleHeading>
+            <Title
+                text="{AccountName}"
+                level="H2"/>
+        </semantic:titleHeading>
+
+        <semantic:headerContent>
+            <ObjectNumber />
+        </semantic:headerContent>
+
+        <semantic:sendEmailAction>
+            <semantic:SendEmailAction id="shareEmail" press=".onShareEmailPress"/>
+        </semantic:sendEmailAction>
+
+        <semantic:content>
+            <l:VerticalLayout>
+                <ObjectStatus title="Salutation" text="{Salutation}" />
+                <ObjectStatus title="First Name" text="{FirstName}" />
+                <ObjectStatus title="Last Name" text="{LastName}" />
+                <ObjectStatus title="Title" text="{Title}" />
+                <ObjectStatus title="Department" text="{Department}" />
+                <ObjectStatus title="Birthdate" text="{Birthdate}" />
+                <ObjectStatus title="Phone" text="{Phone}" />
+                <ObjectStatus title="Mobile Phone" text="{MobilePhone}" />
+                <ObjectStatus title="Email" text="{Email}" />
+            </l:VerticalLayout>
+        </semantic:content>
+
+    </semantic:SemanticPage>
+
+</mvc:View>

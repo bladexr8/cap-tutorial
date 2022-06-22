@@ -21,6 +21,19 @@ annotate RiskService.Mitigations with {
 	risks        @title: 'Risks';
 }
 
+annotate RiskService.Contacts with {
+	AccountName		@title: 'Account Name';
+	Salutation    	@title: 'Salutation';
+    FirstName     	@title: 'First Name';
+    LastName      	@title:	'Last Name';
+    Title         	@title: 'Title';
+    Department    	@title: 'Department';
+    Birthdate     	@title: 'Birthdate';
+    Phone         	@title: 'Phone';
+    MobilePhone   	@title: 'Mobile Phone';
+    Email         	@title: 'Email';
+}
+
 annotate RiskService.Risks with @(
 	UI: {
 		HeaderInfo: {
@@ -38,7 +51,10 @@ annotate RiskService.Risks with @(
 		SelectionFields: [prio],
 		LineItem: [
 			{Value: title},
-			{Value: miti_ID},
+			{
+				Value: miti_ID,
+				![@HTML5.CssDefaults] : {width : '100%'}
+			},
 			{
 				Value: prio,
 				Criticality: criticality
@@ -90,3 +106,49 @@ annotate RiskService.Risks with {
 		}
 	);
 }
+
+annotate RiskService.Contacts with @(
+	UI: {
+		HeaderInfo  : {
+			$Type : 'UI.HeaderInfoType',
+			TypeName : 'Contact',
+			TypeNamePlural : 'Contacts',
+			Title: {
+				$Type: 'UI.DataField',
+				Value: AccountName
+			},
+			Description: {
+				$Type: 'UI.DataField',
+				Value: Title
+			}
+		},
+		SelectionFields  : [
+			AccountName
+		],
+		LineItem  : [
+			{Value: AccountName},
+			{Value: Salutation},
+			{Value: FirstName},
+			{Value: LastName},
+			{Value: Title},
+			{
+				Value: Email,
+				![@HTML5.CssDefaults] : {width : '100%'}
+			}
+		],
+		Facets  : [
+			{$Type: 'UI.ReferenceFacet', Label: 'Main', Target: '@UI.FieldGroup#Main'}
+		],
+		FieldGroup#Main  : {
+			$Type : 'UI.FieldGroupType',
+			Data: [
+				{Value: Salutation},
+				{Value: FirstName},
+				{Value: LastName}
+			]
+			
+		},
+	}
+) {
+
+};
